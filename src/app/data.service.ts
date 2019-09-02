@@ -10,7 +10,7 @@ export class DataService {
       title: "Nssi, Nssi",
       chanteur: "Khaled",
       image:"assets/album1.jpg",
-      style: "#RAI"
+      style: "#RAÏ"
     },
     {
       title: "You're the one i need",
