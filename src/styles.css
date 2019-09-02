@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+
+    height: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2016/07/16/07/10/music-1521116__340.png");
+    
+}
