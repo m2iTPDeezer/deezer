@@ -15,7 +15,7 @@ import { DataService } from './data.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
