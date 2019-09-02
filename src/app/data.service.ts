@@ -1,0 +1,33 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  albums = [
+    {
+      title: "Nssi, Nssi",
+      chanteur: "Khaled",
+      image:"assets/album1.jpg",
+      style: "#RAI"
+    },
+    {
+      title: "You're the one i need",
+      chanteur: "Barry White",
+      image: "assets/album2.jpg",
+      style: "#pop"
+    },
+    {
+      title: "I believe i can fly",
+      chanteur: "R Kelly",
+      image: "assets/album3.jpg",
+      style: "#magic song"
+    },
+
+  ]
+
+  constructor() { }
+
+
+}

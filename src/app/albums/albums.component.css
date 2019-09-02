@@ -1,0 +1,26 @@
+.style {
+
+    position:absolute;
+    margin-top: -284px;
+    margin-left: 141px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    font-size: 21px;
+}
+
+.text {
+
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+img {
+
+    border:1px solid gray;
+padding:5px;
+box-shadow:2px 2px 10px gray; 
+-moz-box-shadow:2px 2px 10px gray;
+-webkit-box-shadow:2px 2px 10px gray;
+}
