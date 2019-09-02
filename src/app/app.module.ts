@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DataService } from './data.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
