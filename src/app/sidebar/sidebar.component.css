@@ -14,3 +14,37 @@
     background-color: rgb(128, 128, 128, 0.6)
 }
 
+.logo{
+    border-radius: 50%;
+    width: 50px;
+}
+
+.sidebar{
+    background-color: rgb(41, 36, 36);
+
+}
+
+.user{
+    color: white;
+    margin-right: 120px
+}
+.log{
+    color:grey;
+    margin-top: 40px;
+    margin-left: -175px;
+    
+}
+.logo{
+    margin-right: 80px;
+}
+
+.logoName{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.follow{
+    display: flex;
+
+}
