@@ -24,11 +24,11 @@ img {
     height: 232px;
 }
 
-a {
+p {
     color: rgb(211, 192, 192);
 }
 
-a :hover {
+p :hover {
     color: rgb(0, 255, 0);
 }
 
