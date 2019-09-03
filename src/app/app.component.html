@@ -19,15 +19,16 @@
         </div>
     </div>
 
-    <div style="margin-top:-248px"> 
-        <div>
+    <div class="row">
+        <div class="col-2 sidebar">
             <app-sidebar></app-sidebar>
         </div>
 
-        <div class="albums">
-            <h2>Stream</h2>
-            <app-albums></app-albums>
-        </div>
 
+        <div class=col-10>
+
+            <h2>Stream</h2>
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>

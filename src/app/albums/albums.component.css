@@ -20,7 +20,7 @@ img {
     box-shadow: 2px 2px 10px gray;
     -moz-box-shadow: 2px 2px 10px gray;
     -webkit-box-shadow: 2px 2px 10px gray;
-    width: 192px;
+    width: 190px;
     height: 232px;
 }
 
@@ -32,7 +32,9 @@ a :hover {
     color: rgb(0, 255, 0);
 }
 
-.image {
-    width: 248px;
-    height: 227px;
-}
+
+/* .cadre {
+
+   width: 55px;
+    
+} */
