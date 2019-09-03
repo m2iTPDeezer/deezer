@@ -1,23 +1,19 @@
 <form [formGroup] = 'formSignin' (ngSubmit)="validerSignin()" class="formulaireSignin">
     <div>
-        <input type="text" formControlName = 'nom' placeholder="Entrez votre nom" [(ngModel)]="nom" >
-        <!-- [{ngModel}]="nom" -->
+        <input type="text" formControlName = 'nom' placeholder="Entrez votre nom"  >
         <span *ngIf = "formSignin.controls.nom.invalid">Veuillez renseigner un nom correct</span>
     </div>
     <div>
         <input type="text" formControlName = 'prenom' placeholder="Entrez votre prénom" >
-        <!-- [{ngModel}]="prenom" -->
         <span *ngIf = "formSignin.controls.prenom.invalid">Veuillez renseigner un prénom correct</span>
     </div>
     <div>
         <input type="text" formControlName = 'mail' placeholder="Entrez votre email" > 
-        <!-- [{ngModel}]="mail" -->
         <span *ngIf = "formSignin.controls.mail.invalid">Veuillez renseigner un mail correct</span>
     </div>
     <div>
-        <input type="text" formControlName = 'password' placeholder="Entrez votre password" >
+        <input type="password" formControlName = 'password' placeholder="Entrez votre password" >
         <span *ngIf = "formSignin.controls.password.invalid">Veuillez renseigner un password correct</span>
-        <!-- [{ngModel}]="password" -->
     </div>
     <button type="submit" [disabled]="!formSignin.valid">Valider</button>
 </form>

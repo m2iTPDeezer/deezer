@@ -5,11 +5,11 @@
         <!-- Logo de base, on devra récupérer celui de l'utilisateur après log in -->
         <img src="assets/avatar1.png" class="logo">
         <!-- Nom de l'utilisateur ( Invité si pas de Login) + Fonction Log In / Log out-->
-        <p class="user"> <strong> <a href="signin"> Invité </a></strong></p>
+        <p class="user"> <strong>  Invité </strong></p>
     </div> 
 
     <div class="row">
-        <p class="log"> <a>Log in </a > || <a href="signin">Sign in</a></p>
+        <p class="log"> <a>Log in </a ></p>
     </div>
 </div>
 
@@ -24,13 +24,20 @@
             <p class="nbFollowers" style="color: grey"> 0 <span style="color: grey">Followers</span></p>
         </div>
     </div>
+    <!-- <p class="signInText">No account ? Please, <a href="signin">Sign In </a>Now !</p> -->
+</div>
+
+<div class="row signIn">
+    <div class="col-12">
+    <p class="signInText">No account ? Please, <a routerLink="signin">Sign In </a>Now !</p>
+    </div>
 </div>
 
 
 
     <div class="row it">
         <div class="col-12 menu">
-            <a href="" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy"
+            <a routeurLink="stream" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy"
                     aria-hidden="true">&nbsp;Top
                     50</i> </a>
         </div>

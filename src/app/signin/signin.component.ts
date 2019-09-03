@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,27 +9,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class SigninComponent implements OnInit {
 
-  nom
-  prenom
-  mail
-  password
-
   formSignin: FormGroup = this.fb.group({
     nom: ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
     prenom: ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
-    mail: ['', ] ,//[Validators.required, Validators.pattern("^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})")]]
-    password : ['', ]
+    mail: ['', ] ,//[Validators.required, Validators.pattern("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/")]]
+    password : ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")] ]
 
   })
-  // private api:ApiService
-  constructor(private fb: FormBuilder) { }
+  
+  constructor(private fb: FormBuilder ,private api:ApiService) { }
 
   ngOnInit() {
-
+    console.log("coucou")
   }
 
   validerSignin = () =>{
-
+    console.log(this.formSignin.value.nom)
+    this.api.apiPost('signin', {nom: this.formSignin.value.nom, prenom : this.formSignin.value.prenom, email: this.formSignin.value.mail, password: this.formSignin.value.password}).subscribe((res:any)=> {
+      if(res.allowd) {
+        console.log("Utilisateur ajouté!")
+      }
+      else {
+        console.log('ERREUR');
+      }
+    })
 
   }
 
