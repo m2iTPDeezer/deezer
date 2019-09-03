@@ -17,6 +17,7 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { PlayerComponent } from './player/player.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ApiService } from './api.service';
 
 const myRoute : Routes = [
   {path: 'stream', component: AlbumsComponent},
@@ -51,7 +52,8 @@ const myRoute : Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(myRoute)
   ],
-  providers: [DataService],
+  providers: [DataService,
+    ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

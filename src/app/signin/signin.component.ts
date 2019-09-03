@@ -8,15 +8,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class SigninComponent implements OnInit {
 
+  nom
+  prenom
+  mail
+  password
+
   formSignin: FormGroup = this.fb.group({
     nom: ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
     prenom: ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
-    mail: ['', [Validators.required, Validators.pattern("^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})")]]
+    mail: ['', ] ,//[Validators.required, Validators.pattern("^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})")]]
+    password : ['', ]
 
   })
+  // private api:ApiService
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+
   }
 
   validerSignin = () =>{
