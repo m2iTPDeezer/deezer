@@ -8,8 +8,8 @@ import { DataService } from '../data.service';
 })
 export class AlbumsComponent implements OnInit {
   album;
-  id;
-  tab: Array<any> = new Array<any>();
+
+
 
   constructor(private data: DataService) { }
 
@@ -19,17 +19,16 @@ export class AlbumsComponent implements OnInit {
 
   }
 
-  like = () => {
-    console.dir(this.album)
-    // if (this.id != 0) {
+  //le clic sur le like déclenche la fonction like qui ajoutera la music favorite au composant likes
+  like = (id) => {
 
-    //   let elt = this.album.find((u => u.id == this.album.id));
-
-    //   this.tab.push(this.album.id);
-    //   console.log(this.tab)
-
-    // }
-
+    if (id != 0) {
+      // On récupère l'élément cliqué dan sle tableau
+      let elt = this.album.find((u => u.id == id));
+      // On l'ajoute dans le tableau des favoris
+      this.data.mesLikes.push(elt);
+    }
   }
-
 }
+
+
