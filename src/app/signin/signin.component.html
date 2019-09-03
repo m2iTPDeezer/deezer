@@ -1,1 +1,15 @@
-<p>signin works!</p>
+<form [formGroup] = 'formSignin' (ngSubmit)="validerSignin()">
+    <div>
+        <input type="text" formControlName = 'nom' placeholder="Entrez votre nom">
+        <span *ngIf = "formSignin.controls.titre.invalid">Veuillez renseigner un nom correct</span>
+    </div>
+    <div>
+        <input type="text" formControlName = 'prenom' placeholder="Entrez votre prénom">
+        <span *ngIf = "formSignin.controls.prix.invalid">Veuillez renseigner un prénom correct</span>
+    </div>
+    <div>
+        <input type="text" formControlName = 'email' placeholder="Entrez votre email">
+        <span *ngIf = "formSignin.controls.url.invalid">Veuillez renseigner un mail correct</span>
+    </div>
+    <button type="submit" [disabled]="!formSignin.valid">Valider</button>
+</form>

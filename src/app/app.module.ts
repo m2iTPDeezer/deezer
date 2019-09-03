@@ -15,6 +15,19 @@ import { ItemmenuComponent } from './itemmenu/itemmenu.component';
 import { LikesComponent } from './likes/likes.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { PlayerComponent } from './player/player.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+const myRoute : Routes = [
+  {path: 'stream', component: AlbumsComponent},
+  {path: '', component: AlbumsComponent},
+  {path: 'likes', component: LikesComponent},
+  {path: 'playlist', component: PlaylistComponent},
+  {path: 'tracks', component: TracksComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'signin', component: SigninComponent},
+
+]
 
 @NgModule({
   declarations: [
@@ -33,7 +46,10 @@ import { PlayerComponent } from './player/player.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
