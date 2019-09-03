@@ -9,8 +9,6 @@ import { DataService } from '../data.service';
 export class AlbumsComponent implements OnInit {
   album;
 
-
-
   constructor(private data: DataService) { }
 
   ngOnInit() {
