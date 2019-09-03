@@ -9,7 +9,7 @@
 }
 
 .text {
-    color: rgb(5, 4, 100);
+    color: rgb(28, 229, 236);
     font-size: 13px;
     font-weight: bold;
 }
@@ -25,7 +25,7 @@ img {
 }
 
 a {
-    color: rgb(99, 7, 7);
+    color: rgb(211, 192, 192);
 }
 
 a :hover {
