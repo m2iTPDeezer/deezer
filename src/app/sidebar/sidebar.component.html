@@ -5,11 +5,13 @@
         <!-- Logo de base, on devra récupérer celui de l'utilisateur après log in -->
         <img src="assets/avatar1.png" class="logo">
         <!-- Nom de l'utilisateur ( Invité si pas de Login) + Fonction Log In / Log out-->
-        <p class="user"> <strong>  Invité </strong></p>
+        <p class="user"> <strong>  Invité </strong> 
+        <p class="log" *ngIf="!isLogged"> <a routerLink="login">Log in </a ></p>
+         <p class="log" *ngIf="isLogged" (click)="logOut()">Log out</p>   
     </div> 
 
     <div class="row">
-        <p class="log"> <a>Log in </a ></p>
+
     </div>
 </div>
 
@@ -29,7 +31,8 @@
 
 <div class="row signIn">
     <div class="col-12">
-    <p class="signInText">No account ? Please, <a routerLink="signin">Sign In </a>Now !</p>
+    <p class="signInText"   *ngIf="!isLogged"   >No account ? Please, <a routerLink="signin">Sign In </a>Now !</p>
+
     </div>
 </div>
 

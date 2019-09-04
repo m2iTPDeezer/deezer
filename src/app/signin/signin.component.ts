@@ -20,17 +20,16 @@ export class SigninComponent implements OnInit {
   constructor(private fb: FormBuilder ,private api:ApiService) { }
 
   ngOnInit() {
-    console.log("coucou")
   }
 
   validerSignin = () =>{
-    console.log(this.formSignin.value.nom)
-    this.api.apiPost('signin', {nom: this.formSignin.value.nom, prenom : this.formSignin.value.prenom, email: this.formSignin.value.mail, password: this.formSignin.value.password}).subscribe((res:any)=> {
+    // console.log(this.formSignin.value.nom)
+    this.api.apiPost('signin', {nom: this.formSignin.value.nom, prenom : this.formSignin.value.prenom, mail: this.formSignin.value.mail, password: this.formSignin.value.password}).subscribe((res:any)=> {
       if(res.allowd) {
-        console.log("Utilisateur ajouté!")
+       alert("Utilisateur ajouté!")
       }
       else {
-        console.log('ERREUR');
+        alert('ERREUR');
       }
     })
 

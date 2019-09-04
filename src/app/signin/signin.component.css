@@ -1,4 +1,10 @@
 .formulaireSignin{
 
     color: grey;
+    margin-left: 150px;
+}
+
+.titreSignIn{
+    color: white;
+    text-align: center; 
 }

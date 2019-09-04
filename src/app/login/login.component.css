@@ -1,0 +1,11 @@
+.title{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.formulaireLogin{
+    display: flex;
+
+    justify-content: center;
+}

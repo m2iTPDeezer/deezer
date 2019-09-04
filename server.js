@@ -27,6 +27,8 @@ app.post('/signin', (req, res)=> {
         result.error = true;
     }
     if(!result.error){
+        result.allowd = true;
+
         users.push({
             nom :      data.nom,
             prenom :   data.prenom,
@@ -39,6 +41,34 @@ app.post('/signin', (req, res)=> {
     res.json(result);
 })
 
+app.post('/login',(req, res) => {
+    const data = req.body;
+    result = {};
+    result.allowd = false;
+    const u = users.find(x=> x.mail == data.mail && x.password == data.password);
+    if(u)
+    {
+        result.allowd = true;
+        u.token = (Math.random()*10 + Math.random()*10).toString(26);
+        result.token = u.token;
+        fs.writeFileSync('public/user.json', JSON.stringify(users));
+    }
+    res.json(result);
+})
+
+// app.post('/logOut', (req, res) => {
+//     const data = req.body;
+//     // alert(req.body)
+//     console.log(req.body);
+//     const result = {logOut : false};
+//     const u = users.find(x=> x.token == data.token);
+//     if(u) {
+//         u.token = '';
+//         fs.writeFileSync('public/user.json', JSON.stringify(users));
+//         result.logOut = true;
+//     }
+//     res.json(result);
+// })
 
 
 app.listen(port, function () {

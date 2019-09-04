@@ -1,12 +1,14 @@
-<!-- <div>
-    <div>
-        <input type="text" name="login" [(ngModel)]="login" placeholder="votre Login" />
-    </div>
-    <div>
-        <input type="password" name="password" [(ngModel)]="password" placeholder="votre password" />
-    </div>
-    <button (click)="logIn()">
-        se connecter
-    </button>
 
-</div> -->
+<h2 class="title">Login</h2>
+
+<form [formGroup] = 'formLogin' (ngSubmit)="validerLogin()" class="formulaireLogin">
+    <div>
+        <input type="text" formControlName = 'mail' placeholder="Entrez votre email" > 
+        <span *ngIf = "formLogin.controls.mail.invalid">Veuillez renseigner un mail correct</span>
+    </div>
+    <div>
+        <input type="password" formControlName = 'password' placeholder="Entrez votre password" >
+        <span *ngIf = "formLogin.controls.password.invalid">Veuillez renseigner un password correct</span>
+    </div>
+    <button type="submit" [disabled]="!formLogin.valid">Valider</button>
+</form>

@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
+  isLogged = true;
   baseUrl = "http://localhost:3000/";
   constructor(private http : HttpClient) { }
 
@@ -15,4 +16,5 @@ export class ApiService {
   apiPost = (link, data) => {
     return this.http.post(this.baseUrl+link, data);
   }
+
 }
