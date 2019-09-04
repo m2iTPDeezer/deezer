@@ -9,14 +9,17 @@ import { DataService } from '../data.service';
 export class AlbumsComponent implements OnInit {
   album;
   tabAlbPlaylist; //tableau des music ajoutés dans playlist
+  tabMyPlaylist;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
 
     this.album = this.data.albums;
-    
+    this.tabMyPlaylist = this.data.myPlaylist;
+    this.tabAlbPlaylist = this.data.albumPlaylist;
 
+    console.dir(this.tabAlbPlaylist)
   }
 
   //le clic sur le like déclenche la fonction like qui ajoutera la music favorite au composant likes
@@ -31,10 +34,18 @@ export class AlbumsComponent implements OnInit {
   }
 
   ajoutInPlaylist = (id) => {
+    console.log(id)
     let elt = this.album.find((u => u.id == id));
-    this.data.albumPlaylist.push(elt);
-    console.log(this.data.albumPlaylist);
+    let confirmer = prompt('Dans quelle playlist voulez vous ajouter cet album ?');
+    console.log(this.tabAlbPlaylist)
+    this.tabAlbPlaylist.forEach((x) => {
+      console.log(x)
+      
+      if (x.title == confirmer) {
 
+        x.albums.push(elt);
+      }
+    })
   }
 }
 

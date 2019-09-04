@@ -7,10 +7,6 @@
      
 }
 
-/* div .text :hover {
-
-    box-shadow: 
-} */
 
 .style {
     position: absolute;
@@ -38,12 +34,19 @@ img {
     height: 232px;
 }
 
-p {
-    color: rgb(211, 192, 192);
+p .like {
+    color: rgb(0, 255, 0);
 }
 
-p :hover {
+ p :hover {
+
     color: rgb(0, 255, 0);
+
+}
+
+p {
+
+    color: white;
 }
 
 

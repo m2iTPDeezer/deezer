@@ -8,9 +8,6 @@ export class DataService {
   mesLikes: Array<any> = new Array<any>();
   //tableau qui contiendra tous les noms de playlist
   myPlaylist: Array<any> = new Array<any>();
-  // tableau qui contiendra tous les albums pour chaque playlist
-  albumPlaylist: Array<any> = new Array<any>();
-
 
   albums = [
     {
@@ -42,7 +39,12 @@ export class DataService {
       style: "#hindi"
     }
 
-  ]
+  ];
+
+    // tableau qui contiendra tous les albums pour chaque playlist
+    albumPlaylist = [
+        
+    ];
 
   constructor() { }
 
