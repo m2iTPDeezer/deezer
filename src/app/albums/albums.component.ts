@@ -8,12 +8,14 @@ import { DataService } from '../data.service';
 })
 export class AlbumsComponent implements OnInit {
   album;
+  tabAlbPlaylist; //tableau des music ajoutés dans playlist
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
 
     this.album = this.data.albums;
+    
 
   }
 
@@ -26,6 +28,13 @@ export class AlbumsComponent implements OnInit {
       // On l'ajoute dans le tableau des favoris
       this.data.mesLikes.push(elt);
     }
+  }
+
+  ajoutInPlaylist = (id) => {
+    let elt = this.album.find((u => u.id == id));
+    this.data.albumPlaylist.push(elt);
+    console.log(this.data.albumPlaylist);
+
   }
 }
 

@@ -4,16 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-// tableau qui contiendra les likes
+  // tableau qui contiendra les likes
   mesLikes: Array<any> = new Array<any>();
+  //tableau qui contiendra tous les noms de playlist
   myPlaylist: Array<any> = new Array<any>();
+  // tableau qui contiendra tous les albums pour chaque playlist
+  albumPlaylist: Array<any> = new Array<any>();
+
 
   albums = [
     {
       id: 1,
       title: "Nssi, Nssi",
       chanteur: "Khaled",
-      image:"assets/album1.jpg",
+      image: "assets/album1.jpg",
       style: "#RAÏ"
     },
     {

@@ -11,30 +11,41 @@ export class PlaylistComponent implements OnInit {
   playlist;
   added = false;
   novo: boolean;
-  tabPlaylist;
+  tabPlaylist; // tableau des noms playlist
   add = 0;
+  tabAlbumPlaylist; // tableau de tous les album par playlist
+  clicPlaylist = false;
+
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.tabPlaylist = this.data.myPlaylist;
+    this.tabAlbumPlaylist = this.data.albumPlaylist;
   }
 
   ajout() {
 
     this.novo = false;
     this.nouveauPlaylist = true;
-    document.querySelector('button').style.display = "none";
-    this.ajouter();
     this.add++;
   }
 
   ajouter() {
-    let zone = document.querySelector('section');
-    zone.style.display = "none";
-     this.added = true;
-     this.novo = true;
-     document.querySelector('button').style.display = "block";
-     this.add++;    
+
+    this.added = true;
+    this.novo = true;
+    this.tabPlaylist.push(this.playlist);
+    this.add++;
+  }
+
+  maPlaylist() {
+
+    this.clicPlaylist = true;
+    
+  }
+
+  afficher() {
+    this.added = true;
   }
 }
