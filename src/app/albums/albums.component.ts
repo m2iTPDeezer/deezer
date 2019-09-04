@@ -40,10 +40,11 @@ export class AlbumsComponent implements OnInit {
     console.log(this.tabAlbPlaylist)
     this.tabAlbPlaylist.forEach((x) => {
       console.log(x)
-      
+
       if (x.title == confirmer) {
 
         x.albums.push(elt);
+
       }
     })
   }

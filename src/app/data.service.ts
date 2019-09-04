@@ -41,10 +41,10 @@ export class DataService {
 
   ];
 
-    // tableau qui contiendra tous les albums pour chaque playlist
-    albumPlaylist = [
-        
-    ];
+  // tableau qui contiendra tous les albums pour chaque playlist
+  albumPlaylist = [
+
+  ];
 
   constructor() { }
 

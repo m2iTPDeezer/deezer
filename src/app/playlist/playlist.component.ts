@@ -38,7 +38,7 @@ export class PlaylistComponent implements OnInit {
     this.added = true;
     this.isAffich = false;
     this.novo = true;
-    this.data.albumPlaylist.push({title : this.playlist, albums:[]});
+    this.data.albumPlaylist.push({ title: this.playlist, albums: [] });
     this.tabAlbumPlaylist = this.data.albumPlaylist;
     this.add++;
     this.nouveauPlaylist = false;
@@ -48,7 +48,7 @@ export class PlaylistComponent implements OnInit {
 
   maPlaylist(albums) {
     console.dir(albums)
-    this.albums = albums
+    this.albums = albums;
     this.clicPlaylist = true;
 
   }
