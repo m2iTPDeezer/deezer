@@ -55,8 +55,10 @@ export class PlaylistComponent implements OnInit {
 
   afficher() {
     this.added = true;
-    console.dir(this.data.albumPlaylist)
+    console.dir(this.data.albumPlaylist);
+    this.data.myPlaylist;
     this.tabAlbumPlaylist = this.data.albumPlaylist;
+
   }
 
   delete(u) {

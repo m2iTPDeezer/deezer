@@ -10,6 +10,7 @@ export class AlbumsComponent implements OnInit {
   album;
   tabAlbPlaylist; //tableau des music ajoutés dans playlist
   tabMyPlaylist;
+  add: number;
 
   constructor(private data: DataService) { }
 
@@ -44,9 +45,24 @@ export class AlbumsComponent implements OnInit {
       if (x.title == confirmer) {
 
         x.albums.push(elt);
-
+        alert('album ajouté');
       }
+
+      // } else if (x.title != confirmer) {
+      //   let confirm = prompt('Voulez vous créer une nouvelle playlist: Oui/Non');
+      //   console.log(confirm)
+
+      //   if (confirm == 'oui') {
+      //     let nouvellePlaylist = prompt('Veuillez entrez une nouvelle playlist');
+      //     let i = this.tabMyPlaylist.find((u));
+      //    this.tabMyPlaylist.push(nouvellePlaylist);
+      //    this.add++;
+      //    console.log(this.tabMyPlaylist);
+      //   }
+      // }
     })
+
+
   }
 }
 
