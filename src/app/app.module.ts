@@ -16,6 +16,7 @@ import { LikesComponent } from './likes/likes.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { PlayerComponent } from './player/player.component';
 import { RouterModule, Routes } from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const myRoute : Routes = [
   {path: 'stream', component: AlbumsComponent},
@@ -44,6 +45,8 @@ const myRoute : Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(myRoute)
   ],
   providers: [DataService],
