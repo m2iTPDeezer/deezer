@@ -10,8 +10,8 @@
 
 .style {
     position: absolute;
-    margin-top: -284px;
-    margin-left: 99px;
+    margin-top: -304px;
+    margin-left: 117px;
     color: white;
     font-weight: bold;
     background-color: black;
@@ -45,6 +45,11 @@ p .like {
 }
 
 p {
+
+    color: white;
+}
+
+h1 {
 
     color: white;
 }
